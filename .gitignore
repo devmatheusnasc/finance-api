@@ -1,6 +1,6 @@
 # Maven e Java
-target/
-out/
+/target/
+/out/
 *.class
 
 # IDEs
@@ -12,9 +12,6 @@ out/
 .env
 .env.*
 !.env.example
-application-local.yml
-application-local.yaml
-application-local.properties
 application-*.local.yml
 application-*.local.yaml
 application-*.local.properties
@@ -26,3 +23,6 @@ logs/
 # Sistema operacional
 .DS_Store
 Thumbs.db
+
+#Docs
+/docs/security/

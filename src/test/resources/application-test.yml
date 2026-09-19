@@ -1,0 +1,33 @@
+spring:
+  config:
+    activate:
+      on-profile: test
+
+finance:
+  security:
+    cors:
+      allowed-origins:
+        - https://app.finance.test
+    authentication:
+      session-duration: PT30M
+      session-idle-timeout: PT5M
+      session-activity-update-interval: PT1M
+      credential-max-failures: 5
+      credential-lock-duration: PT15M
+      account-rate-limit:
+        max-failures: 5
+        window: PT15M
+        block-duration: PT15M
+      source-rate-limit:
+        max-failures: 5
+        window: PT15M
+        block-duration: PT15M
+      registration-rate-limit:
+        max-attempts: 5
+        window: PT15M
+        block-duration: PT15M
+
+logging:
+  level:
+    root: WARN
+    br.com.finance: INFO

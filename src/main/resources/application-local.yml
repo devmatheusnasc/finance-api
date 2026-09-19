@@ -1,0 +1,20 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+    import: optional:file:.env[.properties]
+
+finance:
+  security:
+    cors:
+      allowed-origins:
+        - http://localhost:5173
+        - http://localhost:3000
+
+logging:
+  level:
+    root: INFO
+    br.com.finance: DEBUG
+
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [${spring.application.name}] [correlationId=%X{correlationId:-}] [%thread] %logger{36} - %msg %kvp%n%wEx"

@@ -1,0 +1,21 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+logging:
+  level:
+    root: INFO
+    br.com.finance: INFO
+    org.hibernate: WARN
+
+  structured:
+    format:
+      console: logstash
+
+    json:
+      add:
+        service.name: ${spring.application.name}
+
+      stacktrace:
+        max-length: 8192

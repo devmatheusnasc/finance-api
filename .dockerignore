@@ -10,4 +10,4 @@ target
 *.log
 logs
 README.md
-compose.yaml
+compose*.yaml
